@@ -19,7 +19,7 @@ public class App
         ApplicationContext context=
         		new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
        /* 
-        * basic configuration...........
+        * basic configuration and insert student details...........
         
         JdbcTemplate template = context.getBean("jdbcTemplate" , JdbcTemplate.class);
         
