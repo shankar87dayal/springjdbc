@@ -33,6 +33,7 @@ public class App
         
         StudentDao studentDao = context.getBean("studentDaoImpl", StudentDao.class);
         
+        //INSERTING
 //        Student student = new Student();
 //        student.setsId(555);
 //        student.setName("Rahul kumar");
@@ -41,13 +42,18 @@ public class App
 //        int result = studentDao.insert(student);
 //        System.out.println("student added" + result);
         
-        Student student = new Student();
-        student.setsId(444);
-        student.setName("Manjeet ji");
-        student.setCity("colony more patna"); 
+        //UPDATE
+//        Student student = new Student();
+//        student.setsId(444);
+//        student.setName("Manjeet ji");
+//        student.setCity("colony more patna"); 
+//        
+//        int result = studentDao.change(student);
+//        System.out.println("Data change" + result);
         
-        int result = studentDao.change(student);
-        System.out.println("Data change" + result);
+        //DELETION
+        int result = studentDao.delete(555);
+        System.out.println("delete " + result);
         
         
     }
