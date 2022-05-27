@@ -1,5 +1,7 @@
 package com.spring.jdbc;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -43,20 +45,27 @@ public class App
 //        System.out.println("student added" + result);
         
         //UPDATE
-//        Student student = new Student();
-//        student.setsId(444);
-//        student.setName("Manjeet ji");
-//        student.setCity("colony more patna"); 
-//        
-//        int result = studentDao.change(student);
-//        System.out.println("Data change" + result);
+        Student student = new Student();
+        student.setsId(555);
+        student.setName("Rahul kumar singh");
+        student.setCity("saharghat"); 
+        
+        int result = studentDao.change(student);
+        System.out.println("Data change" + result);
         
         //DELETION
 //        int result = studentDao.delete(555);
 //        System.out.println("delete " + result);
         
-        Student student = studentDao.getStudent(222);
-        System.out.println(student);
+//        Student student = studentDao.getStudent(222);
+//        System.out.println(student);
+        
+        
+        List<Student> students = studentDao.getAllStudent();
+        for(Student s:students)
+        {
+        	System.out.println(s);
+        }
         
         
     }
